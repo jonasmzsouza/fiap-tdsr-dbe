@@ -11,10 +11,13 @@ public class SemDesconto extends Desconto {
 	}
 
 	@Override
-	public BigDecimal calcular(Pedido pedido) {
-
+	public BigDecimal aplicar(Pedido pedido) {
 		return BigDecimal.ZERO;
+	}
 
+	@Override
+	protected boolean devoAplicar(Pedido pedido) {
+		return true;
 	}
 
 }
