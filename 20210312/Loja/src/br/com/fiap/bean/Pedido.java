@@ -2,6 +2,7 @@ package br.com.fiap.bean;
 
 import java.math.BigDecimal;
 
+import br.com.fiap.handler.PedidoHandler;
 import br.com.fiap.situacao.Aberto;
 import br.com.fiap.situacao.Situacao;
 
@@ -10,6 +11,7 @@ public class Pedido {
 	private BigDecimal valor;
 	private int qtdItens;
 	private Situacao situacao;
+	public PedidoHandler handler;
 
 	public void abrirChamado() {
 		this.situacao.abrirChamado(this);
@@ -20,6 +22,7 @@ public class Pedido {
 		this.valor = valor;
 		this.qtdItens = 1;
 		this.situacao = new Aberto();
+		this.handler = new PedidoHandler();
 	}
 
 	public Pedido(BigDecimal valor, int qtdItens) {
@@ -27,6 +30,7 @@ public class Pedido {
 		this.valor = valor;
 		this.qtdItens = qtdItens;
 		this.situacao = new Aberto();
+		this.handler = new PedidoHandler();
 	}
 
 	public BigDecimal getValor() {
@@ -54,6 +58,7 @@ public class Pedido {
 	}
 
 	public void setSituacao(Situacao situacao) {
+		handler.notifyAll(this);
 		this.situacao = situacao;
 	}
 
