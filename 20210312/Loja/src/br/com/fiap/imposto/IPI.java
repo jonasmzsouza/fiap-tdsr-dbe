@@ -4,10 +4,14 @@ import java.math.BigDecimal;
 
 import br.com.fiap.interf.PedidoInterface;
 
-public class IPI implements Imposto {
+public class IPI extends Imposto {
+
+	public IPI(Imposto outroImposto) {
+		super(outroImposto);
+	}
 
 	@Override
-	public BigDecimal calcular(PedidoInterface pedido) {
+	public BigDecimal calcularImposto(PedidoInterface pedido) {
 		return pedido.getValor().multiply(new BigDecimal("0.04"));
 	}
 
