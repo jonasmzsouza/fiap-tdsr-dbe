@@ -1,4 +1,4 @@
-package br.com.fiap.proy;
+package br.com.fiap.proxy;
 
 import java.math.BigDecimal;
 

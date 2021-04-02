@@ -6,7 +6,7 @@ import br.com.fiap.bean.Pedido;
 import br.com.fiap.handler.EmailListener;
 import br.com.fiap.handler.LogListener;
 import br.com.fiap.interf.PedidoInterface;
-import br.com.fiap.proy.PedidoProxy;
+import br.com.fiap.proxy.PedidoProxy;
 
 public class TestaSituacao {
 
