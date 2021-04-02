@@ -2,7 +2,7 @@ package br.com.fiap.desconto;
 
 import java.math.BigDecimal;
 
-import br.com.fiap.bean.Pedido;
+import br.com.fiap.interf.PedidoInterface;
 
 public class SemDesconto extends Desconto {
 
@@ -11,12 +11,12 @@ public class SemDesconto extends Desconto {
 	}
 
 	@Override
-	public BigDecimal aplicar(Pedido pedido) {
+	public BigDecimal aplicar(PedidoInterface pedido) {
 		return BigDecimal.ZERO;
 	}
 
 	@Override
-	protected boolean devoAplicar(Pedido pedido) {
+	protected boolean devoAplicar(PedidoInterface pedido) {
 		return true;
 	}
 

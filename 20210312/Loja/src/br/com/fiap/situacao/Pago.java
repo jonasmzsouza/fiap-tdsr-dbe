@@ -1,21 +1,21 @@
 package br.com.fiap.situacao;
 
-import br.com.fiap.bean.Pedido;
+import br.com.fiap.interf.PedidoInterface;
 
 public class Pago extends Situacao {
 
 	@Override
-	public void abrirChamado(Pedido pedido) {
+	public void abrirChamado(PedidoInterface pedido) {
 		System.out.println("Chamado para logistica");
 	}
 
 	@Override
-	public void entregar(Pedido pedido) {
+	public void entregar(PedidoInterface pedido) {
 		pedido.setSituacao(new Entregue());
 	}
 
 	@Override
-	public void cancelar(Pedido pedido) {
+	public void cancelar(PedidoInterface pedido) {
 		pedido.setSituacao(new Cancelado());
 	}
 

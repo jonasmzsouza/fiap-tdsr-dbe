@@ -3,7 +3,7 @@ package br.com.fiap.handler;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.fiap.bean.Pedido;
+import br.com.fiap.interf.PedidoInterface;
 
 public class PedidoHandler {
 	private List<PedidoListeners> listeners;
@@ -20,7 +20,7 @@ public class PedidoHandler {
 		listeners.remove(listener);
 	}
 
-	public void notifyAll(Pedido pedido) {
+	public void notifyAll(PedidoInterface pedido) {
 		listeners.forEach(listener -> listener.update(pedido));
 	}
 }

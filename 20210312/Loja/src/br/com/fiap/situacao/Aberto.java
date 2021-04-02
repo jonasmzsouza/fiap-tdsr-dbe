@@ -1,21 +1,21 @@
 package br.com.fiap.situacao;
 
-import br.com.fiap.bean.Pedido;
+import br.com.fiap.interf.PedidoInterface;
 
 public class Aberto extends Situacao {
 
 	@Override
-	public void abrirChamado(Pedido pedido) {
+	public void abrirChamado(PedidoInterface pedido) {
 		System.out.println("Chamado para financeiro");
 	}
 
 	@Override
-	public void pagar(Pedido pedido) {
+	public void pagar(PedidoInterface pedido) {
 		pedido.setSituacao(new Pago());
 	}
 
 	@Override
-	public void cancelar(Pedido pedido) {
+	public void cancelar(PedidoInterface pedido) {
 		pedido.setSituacao(new Cancelado());
 	}
 

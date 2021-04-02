@@ -3,6 +3,7 @@ package br.com.fiap.desconto;
 import java.math.BigDecimal;
 
 import br.com.fiap.bean.Pedido;
+import br.com.fiap.interf.PedidoInterface;
 
 public class TestaDesconto {
 
@@ -10,7 +11,7 @@ public class TestaDesconto {
 
 		CalculadoraDeDesconto calculadoraDeDesconto = new CalculadoraDeDesconto();
 
-		Pedido pedido = new Pedido(new BigDecimal("100"));
+		PedidoInterface pedido = new Pedido(new BigDecimal("100"));
 
 		BigDecimal desconto = calculadoraDeDesconto.calcular(pedido);
 

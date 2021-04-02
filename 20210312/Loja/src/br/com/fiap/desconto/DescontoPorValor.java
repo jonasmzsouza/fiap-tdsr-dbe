@@ -2,7 +2,7 @@ package br.com.fiap.desconto;
 
 import java.math.BigDecimal;
 
-import br.com.fiap.bean.Pedido;
+import br.com.fiap.interf.PedidoInterface;
 
 public class DescontoPorValor extends Desconto {
 
@@ -12,12 +12,12 @@ public class DescontoPorValor extends Desconto {
 	}
 
 	@Override
-	public BigDecimal aplicar(Pedido pedido) {
+	public BigDecimal aplicar(PedidoInterface pedido) {
 		return pedido.getValor().multiply(new BigDecimal("0.1"));
 	}
 
 	@Override
-	protected boolean devoAplicar(Pedido pedido) {
+	protected boolean devoAplicar(PedidoInterface pedido) {
 		return pedido.getValor().compareTo(new BigDecimal("500")) > 0;
 	}
 

@@ -1,7 +1,7 @@
 package br.com.fiap.handler;
 
-import br.com.fiap.bean.Pedido;
+import br.com.fiap.interf.PedidoInterface;
 
 public interface PedidoListeners {
-	public void update(Pedido pedido);
+	public void update(PedidoInterface pedido);
 }

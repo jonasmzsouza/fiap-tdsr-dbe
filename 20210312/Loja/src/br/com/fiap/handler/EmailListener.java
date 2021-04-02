@@ -1,11 +1,11 @@
 package br.com.fiap.handler;
 
-import br.com.fiap.bean.Pedido;
+import br.com.fiap.interf.PedidoInterface;
 
 public class EmailListener implements PedidoListeners {
 
 	@Override
-	public void update(Pedido pedido) {
+	public void update(PedidoInterface pedido) {
 		System.out.println("Enviando e-mail...");
 	}
 

@@ -2,11 +2,11 @@ package br.com.fiap.desconto;
 
 import java.math.BigDecimal;
 
-import br.com.fiap.bean.Pedido;
+import br.com.fiap.interf.PedidoInterface;
 
 public class CalculadoraDeDesconto {
 
-	public BigDecimal calcular(Pedido pedido) {
+	public BigDecimal calcular(PedidoInterface pedido) {
 
 		Desconto cadeidaDeDesconto = new DescontoPorValor(new DescontoPorQtde(new SemDesconto()));
 
