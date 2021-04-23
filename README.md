@@ -30,4 +30,7 @@ Repositório de atividades e exercícios da graduação de Tecnologia em Anális
 
 ### JSF
 #### 09/04/2021 -> Aula 04 - JSF - Introdução
-- [JSF - Introdução]
+- [JSF - Introdução](https://github.com/jonasmzsouza/fiap-tdsr-dbe/commit/63a700f6aaaebdc6a6f1cb9390aa8270d07e2e5b)
+
+#### 16/04/2021 -> Aula 05 - JSF - Persistência com JPA
+- [JSF - Persistência com JPA]
