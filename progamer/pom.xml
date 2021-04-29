@@ -9,22 +9,6 @@
 	<packaging>war</packaging>
 	<build>
 		<finalName>progamer</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.0.0</version>
-				<executions>
-					<execution>
-						<id>auto-clean</id>
-						<phase>initialize</phase>
-						<goals>
-							<goal>clean</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
 	</build>
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
@@ -32,8 +16,8 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	
 	<dependencies>
-
 		<!-- JSF -->
 		<dependency>
 			<groupId>javax.faces</groupId>
@@ -41,7 +25,7 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- primefaces -->
+		<!-- Primefaces -->
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
@@ -55,7 +39,14 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- CDI -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -69,6 +60,12 @@
 				<groupId>javax.faces</groupId>
 				<artifactId>javax.faces-api</artifactId>
 				<version>2.2</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.enterprise</groupId>
+				<artifactId>cdi-api</artifactId>
+				<version>1.1</version>
 				<scope>provided</scope>
 			</dependency>
 		</dependencies>

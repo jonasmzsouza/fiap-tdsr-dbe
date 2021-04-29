@@ -5,26 +5,26 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
-import br.com.fiap.model.Setup;
+import br.com.fiap.model.User;
 import br.com.fiap.utils.JPAUtil;
 
-public class SetupDao {
+public class UserDao {
 
-	public void save(Setup setup) {
+	public void save(User user) {
 
 		EntityManager manager = JPAUtil.getEntityManager();
 		manager.getTransaction().begin();
-		manager.persist(setup);
+		manager.persist(user);
 		manager.getTransaction().commit();
 		manager.close();
 
 	}
 
-	public List<Setup> getAll() {
+	public List<User> getAll() {
 
 		EntityManager manager = JPAUtil.getEntityManager();
-		String jpql = "SELECT s FROM TB_SETUP s";
-		TypedQuery<Setup> query = manager.createQuery(jpql, Setup.class);
+		String jpql = "SELECT u FROM TB_USER u";
+		TypedQuery<User> query = manager.createQuery(jpql, User.class);
 
 		// manager.close();
 
