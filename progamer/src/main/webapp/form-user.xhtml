@@ -6,8 +6,11 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 
+
 <ui:composition template="_template.xhtml">
+
 	<ui:define name="content">
+	
 		<p:messages id="messages">
 			<p:autoUpdate />
 		</p:messages>
@@ -15,8 +18,8 @@
 		<h:form>
 			<p:card class="card-form">
 				<f:facet name="title">
-       				 User Registration
-    			</f:facet>
+				User Registration
+				</f:facet>
 
 				<h:panelGrid columns="2">
 					<p:outputLabel for="name" value="Name" />
@@ -30,7 +33,7 @@
 					</p:calendar>
 
 					<p:outputLabel for="email" value="E-mail" />
-					<p:inputText id="email" value="#{userBean.user.email}" label="E-mail" required="true" validatorMessage="#{userBean.user.email} is not valid">
+					<p:inputText id="email" value="#{userBean.user.email}" label="E-mail" required="true" validatorMessage="E-mail is not valid">
 						<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
 						<f:ajax event="blur" render="messages" />
 					</p:inputText>
@@ -40,6 +43,15 @@
 						<f:ajax event="blur" render="messages" />
 					</p:password>
 				</h:panelGrid>
+				
+				<p:dialog modal="true" resizable="false" header="Values" widgetVar="dlg" showEffect="fold">
+		            <p:panelGrid id="display" columns="2" columnClasses="label,value">
+		                <h:outputText value="Birth Date"/>
+		                <h:outputText value="#{userBean.user.birthDate}">
+		                    <f:convertDateTime pattern="dd/MM/yyyy"/>
+		                </h:outputText>
+		            </p:panelGrid>
+		        </p:dialog>
 
 				<f:facet name="footer">
 					<p:commandButton icon="pi pi-save" value="Save" action="#{userBean.save}">

@@ -8,15 +8,19 @@
    
 
 <ui:composition template="_template.xhtml">
-	<ui:define name="content">
-		<p:messages id="messages"><p:autoUpdate /></p:messages>
 
+	<ui:define name="content">
+	
+		<p:messages id="messages">
+			<p:autoUpdate />
+		</p:messages>
+		
 		<h:form>
 			<p:card class="card-form">
-			    <f:facet name="title">
-			        New Setup
-			    </f:facet>
-			   
+				<f:facet name="title">
+				New Setup
+				</f:facet>
+
 				<h:panelGrid columns="2">
 					<p:outputLabel for="name" value="Name"/>
 					<p:inputText id="name" value="#{setupBean.setup.name}" label="Name" required="true" >
