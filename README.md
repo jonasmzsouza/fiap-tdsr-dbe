@@ -33,4 +33,13 @@ Repositório de atividades e exercícios da graduação de Tecnologia em Anális
 - [JSF - Introdução](https://github.com/jonasmzsouza/fiap-tdsr-dbe/commit/63a700f6aaaebdc6a6f1cb9390aa8270d07e2e5b)
 
 #### 16/04/2021 -> Aula 05 - JSF - Persistência com JPA
-- [JSF - Persistência com JPA]
+- [JSF - Persistência com JPA](https://github.com/jonasmzsouza/fiap-tdsr-dbe/commit/00aa7b5b02c1b0844b282029de1bcb4a7a4464e0)
+
+#### 23/04/2021 -> Aula 06 - JSF - Ajax e Consultas
+- [Ajax e Consultas](https://github.com/jonasmzsouza/fiap-tdsr-dbe/commit/6cfed96e7a3a9f9376d8ce932b023c6c261edf22)
+
+#### 30/04/2021 -> Aula 07 - Projeto Progamer
+- [Entrega Parcial](https://github.com/jonasmzsouza/fiap-tdsr-dbe/commit/cb05dcc1348b5e1f67b8fda435a1f6e1321eba4b)
+
+#### 07/05/2021 -> Aula 08 - Projeto Progamer - Ajustes
+- [Ajustes de jax e validação de dados]
